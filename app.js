@@ -34,7 +34,7 @@ var option={
     url:"https://us21.api.mailchimp.com/3.0/lists/132653ce33",
     method:"POST",
     headers: {
-        "Authorization": "ishita 8ec863c3f996272e37e737ce3d23ae45-us21"
+        "Authorization": "ishita e8e15f38be48dbf0eada1593de335a4b-us21"
     },
     body: jsonData
 };
@@ -66,4 +66,10 @@ app.listen(3000||process.env.PORT,function(){
 // 8ec863c3f996272e37e737ce3d23ae45-us21
 
 //listid
+// 132653ce33
+
+//api key new
+// e8e15f38be48dbf0eada1593de335a4b-us21
+
+//litsid new
 // 132653ce33

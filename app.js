@@ -1,6 +1,8 @@
+require('dotenv').config();
 const express = require("express");
 const request = require("request");
 const bodyParser = require("body-parser");
+
 
 const app = express();
 
@@ -31,10 +33,10 @@ var jsonData=JSON.stringify(data);
 
 // console.log(firstname,lastname,email);
 var option={
-    url:"https://us21.api.mailchimp.com/3.0/lists/132653ce33",
+    url:process.env.URL,
     method:"POST",
     headers: {
-        "Authorization": "ishita e8e15f38be48dbf0eada1593de335a4b-us21"
+        "Authorization": process.env.API_KEY
     },
     body: jsonData
 };
@@ -59,6 +61,8 @@ app.post("/failure", function(req,res){
 });
 app.listen(3000||process.env.PORT,function(){
     console.log("server is running on port 3000");
+    // console.log(process.env.list-id);
+    console.log(process.env.api_key);
 });
 
 
@@ -73,3 +77,4 @@ app.listen(3000||process.env.PORT,function(){
 
 //litsid new
 // 132653ce33
+// 7793e761155e64736837d4dd0ddf35d5-us21
